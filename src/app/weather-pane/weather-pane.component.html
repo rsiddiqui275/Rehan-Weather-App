@@ -1,0 +1,40 @@
+
+ 
+      
+      <!-- <div *ngFor='let item of inputArray'>
+          <div class="row" id="nanocontainer">
+              <div class="card col-md-9 col-sm-9" align="center" id="nano"> 
+                <table class="table-condensed"> 
+           Humidity :   
+           {{item.main.humidity}}
+           Description :  
+           {{item.weather[0].description}}
+           temp : 
+           {{item.main.temp}}<sup>o</sup>C
+           wind :
+           {{item.wind.speed}}km/h
+          <img src="http://openweathermap.org/img/w/{{item.weather[0].icon}}.png"/>
+        </table>
+        </div>
+        </div>
+      </div> -->
+      
+      <div *ngFor='let item of inputArray'>
+       
+          <div class="card col-md-12 col-sm-12" style="box-align: center" id="nano"> 
+            <table class=" table table-condensed  table-hover" > 
+              <tr>
+              <td class="col-md-2"> {{item.dt_txt | date:'EEEE, MMMM d'}} </td>
+              <td class="col-md-3"> <div class="well"> <img src="http://openweathermap.org/img/w/{{item.weather[0].icon}}.png"/> </div> </td> 
+              <td class="col-md-1"> <strong>{{item.main.temp_max}}&#176;</strong> <br> {{item.main.temp_min}}&#176; </td>
+              <td class="col-md-2">   {{item.weather[0].description}} </td>
+              <td class="col-md-1"> <strong>Humidity :</strong> {{item.main.humidity}}% <strong><br> wind : </strong>{{item.wind.speed}}km/h
+                <strong> <br>temp :</strong>{{item.main.temp}}<sup>o</sup>C</td>
+             </tr>
+            </table>
+         
+      </div>
+      </div>
+  
+      
+    
